@@ -18,6 +18,18 @@ export interface PrestamoResponseDto {
   creadoEn: String;
 }
 
+export interface ErrorResponseDTO {
+  error: String;
+  mensaje: string;
+  detalles?: string[];
+}
+
+export interface CrearPrestamoRequestDto {
+  libroId: string;
+  socioId: string;
+  ejemplares: number[];
+}
+
 export function aResponseDto(p: Prestamo): PrestamoResponseDto {
   return {
     folio: p.folio,
